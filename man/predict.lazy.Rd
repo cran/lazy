@@ -29,7 +29,7 @@
 %             mbiro@ulb.ac.be                     gbonte@ulb.ac.be          %
 % ========================================================================= %
 
-% $Id: predict.lazy.Rd,v 1.2 2003/10/03 13:53:52 mbiro Exp $ %
+% $Id: predict.lazy.Rd,v 1.3 2003/12/09 15:32:27 mbiro Exp $ %
 
 \name{predict.lazy}
 \alias{predict.lazy}
@@ -174,7 +174,7 @@
     \code{T.out=TRUE} in the function call.}
   
   \item{I}{Matrix of \code{idM*q} elements, where \code{idM} is the
-    largest of \code{idM0}, \code{idM1}, and\code{idM2}. Contains the
+    largest of \code{idM0}, \code{idM1}, and \code{idM2}. Contains the
     index of the neighbors of each query point in \code{newdata}.
     In particular, \code{I[i,j]} is the \code{i}th nearest neighbor of
     the \code{q}th query point.}

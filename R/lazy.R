@@ -29,7 +29,7 @@
 #             mbiro@ulb.ac.be                     gbonte@ulb.ac.be          #
 # ========================================================================= #
 
-# $Id: lazy.R,v 1.7 2003/11/09 14:28:34 mbiro Exp $ #
+# $Id: lazy.R,v 1.8 2003/12/09 15:32:18 mbiro Exp $ #
 
 
 .First.lib <- function(lib, pkg)
@@ -146,6 +146,6 @@ predict.lazy <- function(object, newdata = NULL,t.out=FALSE,k.out=FALSE,
     .Call("lazy",object$x,object$y,newdata,
           object$conIdPar,object$linIdPar,object$quaIdPar,
           object$distance,object$metric,object$cmbPar,object$lambda,
-          t.out,k.out,S.out,T.out,I.out)
+          t.out,k.out,S.out,T.out,I.out,PACKAGE="lazy")
 }
 
