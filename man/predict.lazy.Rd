@@ -185,6 +185,7 @@
 \seealso{\code{\link{lazy}}, \code{\link{lazy.control}}}
 
 \examples{
+library("lazy")
 data(cars)
 cars.lazy <- lazy(dist ~ speed, cars)
 predict(cars.lazy, data.frame(speed = seq(5, 30, 1)))

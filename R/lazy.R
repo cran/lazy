@@ -32,9 +32,6 @@
 # $Id: lazy.R,v 1.8 2003/12/09 15:32:18 mbiro Exp $ #
 
 
-.First.lib <- function(lib, pkg)
-  library.dynam("lazy", pkg, lib);
-
 lazy<-function(formula, data=NULL, weights, subset, na.action,
                 control = lazy.control(...),...){
   mt <- terms(formula, data = data)

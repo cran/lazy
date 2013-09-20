@@ -130,6 +130,7 @@ lazy(formula, data=NULL, weights, subset, na.action,
 \seealso{\code{\link{lazy.control}}, \code{\link{predict.lazy}}}
 
 \examples{
+library("lazy")
 data(cars)
 cars.lazy <- lazy(dist ~ speed, cars)
 predict(cars.lazy, data.frame(speed = seq(5, 30, 1)))
