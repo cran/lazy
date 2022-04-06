@@ -311,6 +311,9 @@ void prepareMatricesAux(bModel_t *bM, auxInfo_t *aI, cbPar_t *cb,
   int i;
   double *tmp;
 
+  if (DEG < 0 || DEG > 2)
+    error("Invalid DEG value");
+
   aI->mz[DEG] = d[DEG].M;
   aI->mzA = (d[DEG].M > aI->mzA)? d[DEG].M : aI->mzA;
 
@@ -342,7 +345,6 @@ void prepareMatricesAux(bModel_t *bM, auxInfo_t *aI, cbPar_t *cb,
     bM->o[DEG].s[0]=0;
   }
 }
-
 
 void prepareMatrices(bModel_t *bM, auxInfo_t *aI,
                      idPar_t *id, cbPar_t *cb){
@@ -699,7 +701,10 @@ void idValStd(idPar_t *id, cbPar_t *cb, auxInfo_t *aI, bModel_t *bM,
         if (out->S)
           *(out->S[DEG].c++)=R_NaReal;
       }else{
-        vl=(val*(val<k+1))? val : k+1;
+        if (val != 0 && val < k + 1)
+            vl = val;
+        else
+            vl = k + 1;
         sse=0;
         for(l=0; l<vl; l++){
           e=W[l];
@@ -886,4 +891,3 @@ SEXP packOutput(out_t *out){
   UNPROTECT(out->noRptd);
   return ans;
 }
-
