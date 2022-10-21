@@ -1,6 +1,6 @@
 Package: lazy
-Version: 1.2-17
-Date: 2022-04-05
+Version: 1.2-18
+Date: 2022-10-20
 Title: Lazy Learning for Local Regression
 Author: Mauro Birattari <mauro.birattari@ulb.be> and Gianluca Bontempi
         <gianluca.bontempi@ulb.be>
@@ -13,7 +13,7 @@ Description: By combining constant, linear, and quadratic local models,
         leave-one-out cross-validation.
 License: GPL (>= 2)
 Repository: CRAN
-Packaged: 2022-04-05 14:57:09 UTC; tverhels
+Packaged: 2022-10-20 16:32:53 UTC; tverhels
 NeedsCompilation: yes
-Date/Publication: 2022-04-06 10:12:30 UTC
+Date/Publication: 2022-10-21 11:32:36 UTC
 RoxygenNote: 6.0.1

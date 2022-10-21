@@ -244,7 +244,7 @@ void getPar(SEXP iCR, SEXP iLR, SEXP iQR, SEXP cbR,
     error("Identification is empty.");
 
   /* Combination Parameters */
-  cbR=AS_INTEGER(cbR);
+  cbR=PROTECT(AS_INTEGER(cbR));
   switch (GET_LENGTH(cbR)){
     case 3:
       cb->A=0;
@@ -272,6 +272,7 @@ void getPar(SEXP iCR, SEXP iLR, SEXP iQR, SEXP cbR,
     default:
       error("Combination parameter no good.");
   }
+  UNPROTECT(1);
 }
 
 
